@@ -15,22 +15,30 @@ class Enemy:
         self.hp = hp
         self.dmg = dmg
 
+    def attacked(self, dmg):
+        self.dmg = dmg
+        
+    
 
 
-class Inventory:
+class Item:
 
     inv = list()
 
 
-    def __init__(self, item_name):
-        pass
+    def __init__(self, name, sell_price, buy_price):
+        self.name = name
+        self.sell_price = sell_price
+        self.buy_price = buy_price
 
 
     def add_item(self,item):
         self.item = item
-        
+        Item.inv.append(item)
+        return Item.inv
         
 
     def drop_item(self, item):
-        self.item = item 
-        
+        self.item = item
+        Item.inv.remove(item)
+        return Item.inv
