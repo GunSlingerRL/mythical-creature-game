@@ -4,6 +4,7 @@
 import os
 from page_objects import PageObject
 import pages
+from test_classes import Player
 
 
 # clears the screen for windows or linux/uni
@@ -13,6 +14,10 @@ def clearScreen():
     else:
         _ = os.system("clear")
 
+
+username = input("please enter name >")
+
+player = Player(username, 1, 100, 25, 0)
 
 #function to inititate game
 def main():
@@ -31,7 +36,39 @@ def main():
         thisPage: PageObject = pageDict.get(currentPage)
         print(thisPage.scene)
         # thisPage.get_scene()
+    
+    #####if thisPage.scene == "blah":
+                #encounter(enemy)
+                #if enemy.hp <= 0:
+                    #print("enemy defeated")
+                    #print(thisPage.scene) <<<<<<<Whatever next scene would've been before encounter
+                #elif player.hp <= 0:
+                    #print you died
+                    #print(thisPage.scene) <<<<<Where the .scene == "death"
 
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
+       
         # Get user input as uppercase to make things easy on usb
 
         userInput: str = input("> ").upper()
