@@ -31,10 +31,9 @@ class Character:
         return self.gold
 
     
+    
 
-
-    def is_attacking(self):
-        pass
+    
 
     
 #Enemy can: fight, die, kill

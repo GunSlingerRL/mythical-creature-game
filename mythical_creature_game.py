@@ -1,11 +1,11 @@
 #Help, contributions and guidance by Bareknuckles
 
-
+from random import randint
 import os
 from page_objects import PageObject
 import pages
 from test_classes import Character, Enemy
-import instances
+from instances import vampire
 
 # clears the screen for windows or linux/uni
 def clearScreen():
@@ -17,6 +17,7 @@ def clearScreen():
 #username = input("please enter name >")
 
 player = Character("username", 0, 1, 100, 25, 0)
+
 
 
 # def encounter():
@@ -46,13 +47,7 @@ player = Character("username", 0, 1, 100, 25, 0)
 def main():
 
 
-    #encounter()
-    player.hp = 1
-    player.death()
-    print(player.hp)
-    player.hp = -4
-    player.death()
-    print(player.hp)
+   
     # dictionary containing all our page objects stored by their PAGE_INDEX
     # pageDict = dict()
     #pageDict: dict = pages.getPages()
@@ -87,12 +82,49 @@ def main():
                     #print you died
                     #print(thisPage.scene) <<<<<Where the .scene == "death"
 
+        playing = True
        
+        while playing == True:
        
-       
-       
-       
-    
+            
+            
+            
+
+            while player.hp> 0 or vampire.hp > 0:
+                
+                # if vampire.hp <= 0:
+                #     print("Vampire is dead")
+                #     playing = False
+                #     break
+                # elif player.hp <= 0:
+                #     print(player.death)
+                #     playing = False
+                #     break
+
+                player_hit = randint((player.dmg - 10), player.dmg)
+                vampire.hp -= player_hit
+                print("you hit vamp for: " + str(player_hit))
+                if vampire.hp <= 0:
+                    print("Vampire is dead")
+                    playing = False
+                    break
+
+
+                enemy_hit = randint(0, vampire.dmg)
+                player.hp -= enemy_hit
+                if enemy_hit == 0:
+                    print("vampire missed")
+                else:
+                    print("vamp hit you for: " + str(enemy_hit))
+                if player.hp <= 0:
+                    print(player.death)
+                    playing = False
+                    break
+
+
+                
+                
+                
        
        
        
