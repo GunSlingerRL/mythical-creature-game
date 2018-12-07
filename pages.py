@@ -1,6 +1,14 @@
 from page_objects import PageObject
+from instances import ghoul
+
+
+
+
+
+
 
 def getPages():
+
     pagesDict = dict()
 
     thisDesc = """
@@ -12,9 +20,11 @@ def getPages():
     thisCmds = {"A": "ATTACK", "B": "RUN"}
     pagesDict["START"] = PageObject(thisDesc, thisCmds)
 
+    
+
     thisDesc = "next text\r\nnext more text\r\ntype F to FOOBAR\r\ntype Q to bail on this party\r\n"
     thisCmds = {"F": "FOOBAR", "Q": "QUIT"}
-    pagesDict["ATTACK"] = PageObject(thisDesc, thisCmds)
+    pagesDict["NEXT"] = PageObject(thisDesc, thisCmds)
 
     pagesDict["FOOBAR"] = PageObject("Bar is Foo teext, Q to Quit.\r\n", {"Q":"QUIT"})
     pagesDict["RUN"] = PageObject("""

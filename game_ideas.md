@@ -1,7 +1,24 @@
+**If its an action, its prolly a function**
+**If its an object that has other similar object, prolly a class**
+**For instance, inventory doesn't need to be copied, so it shouldn't be a class...**
+
+
+Class Character
+    CLass Player
+        Class Inventory
+    Class Enemy
+
+
+
+
+
 ##TODO
 - implement battle system
--create functions for objects
-
+- create functions for objects
+- save feature(csv file)
+- inventory system (dictionary or list? nested lists?)
+- shop system
+- equipping items
 
 
 
@@ -49,34 +66,10 @@
         -Weapons    
 
 
-
-
-
-
-####Verbs
-- Attack
-- Taking damage
-- Healing
-- Moving?
-
-
-####Rooms
-- Tavern
-- Forrest
-- Sea
-- Swamp
-- Island
-- Cave
-
 ####General Commands
     - 'Q' = Quit
     - 'S' = Shop
     - 'I' = Inventory
-
-####Synopsis
-
-
-
 
 
 ####Descriptions
@@ -107,6 +100,65 @@
 
 
 
+def
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+|||||||FROM LEARN PYTHON THE HARD WAY |||||||||
+VVVVVVV                               VVVVVVVVV
+
+
+class Scene(object):
+    def enter(self):
+        pass
+
+
+class Engine(object):
+    def __init__(self, scene_map):
+        pass
+    def play(self):
+        pass
+
+class Death(Scene):
+    def enter(self):
+        pass
+
+
+class Another_Scene(Scene):
+    def enter(self):
+        pass
+
+
+
+class Map(object):
+    def __init__(self, start_scene):
+        pass
+    def next_scene(self, scene_name):
+        pass
+    def opening_scene(self):
+        pass
+
+
+        examples
+    a_map = Map('Another_Scene)
+    a_game = Engine(a_map)
+    a_game.play()    

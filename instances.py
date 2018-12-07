@@ -1,10 +1,8 @@
 #creating instances here from test_classes so I won't have a huge instance list on main
-from test_classes import Item, Enemy, Player
+from test_classes import Item, Character, Enemy
 
 
-username = input("please enter name >")
 
-player = Player(username, 1, 100, 25, 0)
 
 
 #Creating some items
@@ -16,7 +14,7 @@ max_potion = Item("Max Heal", "potion", "Heals for full HP", 9999)
 #Creating Enemies
 
 #Regular enemies
-vampire = Enemy("vampire", 75, 10)
+vampire = Enemy("vampire",75, 10)
 ghoul = Enemy("Ghoul", 50, 5)
 harpy = Enemy("Harpy", 50, 10)
 siren = Enemy("Siren", 75, 20)
