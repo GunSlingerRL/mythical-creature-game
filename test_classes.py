@@ -1,11 +1,14 @@
 
 from random import randint
+import csv
 
 
 
 
 #Character can: buy/sell items, attack, take dmg, die, kill, level up, earn gold, equip items
 class Character:
+
+    inventory = dict()    
     def __init__(self, name: str, xp: int, level: int, hp: int, dmg: int, gold: int): #Inventory list or dict
         self.name = name
         self.xp = xp
@@ -21,7 +24,10 @@ class Character:
             print(self.name + " died.")
             #return to last scene
 
-
+    def add_to_inv(self, item, qty):
+        self.item = item
+        #self.inventory[item] = qty
+        
 
     #returns player name
     def get_name(self):

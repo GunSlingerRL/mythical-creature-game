@@ -13,10 +13,13 @@ Class Character
 
 
 ##TODO
-- implement battle system
+- implement battle system (progress: not pretty but sufficient)
 - create functions for objects
 - save feature(csv file)
 - inventory system (dictionary or list? nested lists?)
+    -have csv with item name and price
+    -make function to loop trhough and grab [name], price
+    -add name loop to "add_to_in" function
 - shop system
 - equipping items
 
