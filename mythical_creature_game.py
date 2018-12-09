@@ -5,7 +5,8 @@ import random
 from page_objects import PageObject
 import pages
 from test_classes import Character, Enemy
-from instances import vampire, norm_enemy, boss, mega_boss, final_boss
+from instances import norm_enemy, boss, mega_boss, final_boss
+import csv
 
 # clears the screen for windows or linux/uni
 def clearScreen():
@@ -21,9 +22,11 @@ player = Character("username", 0, 1, 100, 25, 0)
 
 
 
-player.add_to_inv("sword", 1)
+                
+                
+                
 
-print(player.inventory)
+
 
 
 

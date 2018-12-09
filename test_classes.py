@@ -7,6 +7,8 @@ import csv
 
 #Character can: buy/sell items, attack, take dmg, die, kill, level up, earn gold, equip items
 class Character:
+    
+
 
     inventory = dict()    
     def __init__(self, name: str, xp: int, level: int, hp: int, dmg: int, gold: int): #Inventory list or dict
@@ -27,7 +29,11 @@ class Character:
     def add_to_inv(self, item, qty):
         self.item = item
         #self.inventory[item] = qty
-        
+        # with open('items.csv', 'rb') as csvfile:
+        #     itemreader = csv.reader(csvfile, delemiter = ', ')
+        #     for row in itemreader:
+        #         item_name = row[0]
+        self.inventory[item] = qty
 
     #returns player name
     def get_name(self):
